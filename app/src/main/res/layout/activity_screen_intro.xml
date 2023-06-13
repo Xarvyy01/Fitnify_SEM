@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Screen_Intro">
+
+    <ImageView
+        android:id="@+id/app_intro"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="277dp"
+        android:layout_marginEnd="93dp"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="529dp"
+        android:layout_marginEnd="126dp"
+
+        android:text="Fitnify"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
+

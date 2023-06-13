@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_logo"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="145dp"
+        android:layout_height="82dp"
+        android:background="@drawable/btn"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722"
+        app:rippleColor="#000000" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="145dp"
+        android:layout_height="82dp"
+        android:background="@drawable/btn"
+        android:text="Measurements"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722"
+        app:rippleColor="#000000" />
+
+    <Button
+        android:background="@drawable/btn"
+        android:id="@+id/button6"
+        android:layout_width="145dp"
+        android:layout_height="82dp"
+        android:text="StopWatch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.907" />
+
+    <Button
+        android:background="@drawable/btn"
+        android:id="@+id/button4"
+        android:layout_width="145dp"
+        android:layout_height="82dp"
+        android:text="BMI Calculator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.907" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="441dp"
+        android:layout_height="519dp"
+        android:scaleX="0.15"
+        android:scaleY="0.07"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:srcCompat="@drawable/calendar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
