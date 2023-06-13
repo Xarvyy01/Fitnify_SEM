@@ -97,7 +97,7 @@ public class StopWatch extends AppCompatActivity {
 
     public void reset() {
 
-        hodiny = 0;
+        hodiny = 1;
         minuty = 0;
         sekundy = 0;
         seconds = 0;
