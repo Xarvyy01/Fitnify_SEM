@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -21,9 +22,9 @@ public class StopWatch extends AppCompatActivity {
     private boolean zapinac;
     private boolean overenie;
 
-    Button button_play;
-    Button button_stop;
-    Button button_reset;
+    ImageButton button_play;
+    ImageButton button_stop;
+    ImageButton button_reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +98,7 @@ public class StopWatch extends AppCompatActivity {
 
     public void reset() {
 
-        hodiny = 1;
+        hodiny = 0;
         minuty = 0;
         sekundy = 0;
         seconds = 0;

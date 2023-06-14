@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     Button button_calendar;
     Button button_stopwatch;
     Button button_bmi;
+
+    Button button_measurements;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
                 openBMI();
             }
         });
+
+        button_measurements = findViewById(R.id.button8);
+        button_measurements.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMeasurements();
+            }
+        });
     }
 
     public void openCalendar() {
@@ -61,6 +71,14 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, BMI.class);
         startActivity(intent);
+
+    }
+
+    public void openMeasurements() {
+
+        Intent intent = new Intent(this, Measurements.class);
+        startActivity(intent);
+
 
     }
 }
