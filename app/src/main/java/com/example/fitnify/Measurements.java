@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Measurements extends AppCompatActivity {
 
-    Button save_button;
+    ImageButton save_button;
     TextView text;
     EditText editText_Arm;
 
@@ -72,31 +73,44 @@ public class Measurements extends AppCompatActivity {
     }
 
     public void save() {
+        String s = editText_Arm.getText().toString();
+        String nothing = "Klikni TU";
+        if (!(s == nothing)) {
 
-        SharedPreferences sharedPreferences1 = getSharedPreferences(ETXT_ARM, MODE_PRIVATE);
-        SharedPreferences.Editor editor1 = sharedPreferences1.edit();
-        editor1.putString(TEXT_ARM, text.getText().toString());
+            SharedPreferences sharedPreferences1 = getSharedPreferences(ETXT_ARM, MODE_PRIVATE);
+            SharedPreferences.Editor editor1 = sharedPreferences1.edit();
+            editor1.putString(TEXT_ARM, text.getText().toString());
 
-        editor1.apply();
+            editor1.apply();
 
-        SharedPreferences sharedPreferences2 = getSharedPreferences(ETXT_CHEST, MODE_PRIVATE);
-        SharedPreferences.Editor editor2 = sharedPreferences2.edit();
-        editor2.putString(TEXT_CHEST, Text_Chest.getText().toString());
+        }
+        s = editText_Chest.getText().toString();
+        if (!(s == nothing)){
 
-        editor2.apply();
+            SharedPreferences sharedPreferences2 = getSharedPreferences(ETXT_CHEST, MODE_PRIVATE);
+            SharedPreferences.Editor editor2 = sharedPreferences2.edit();
+            editor2.putString(TEXT_CHEST, Text_Chest.getText().toString());
 
-        SharedPreferences sharedPreferences3 = getSharedPreferences(ETXT_LEGS, MODE_PRIVATE);
-        SharedPreferences.Editor editor3 = sharedPreferences3.edit();
-        editor3.putString(TEXT_LEGS, Text_Legs.getText().toString());
+            editor2.apply();
+        }
 
-        editor3.apply();
+        s = editText_Legs.getText().toString();
+        if (!(s == nothing)) {
+            SharedPreferences sharedPreferences3 = getSharedPreferences(ETXT_LEGS, MODE_PRIVATE);
+            SharedPreferences.Editor editor3 = sharedPreferences3.edit();
+            editor3.putString(TEXT_LEGS, Text_Legs.getText().toString());
 
-        SharedPreferences sharedPreferences4 = getSharedPreferences(ETXT_BACK, MODE_PRIVATE);
-        SharedPreferences.Editor editor4 = sharedPreferences4.edit();
-        editor4.putString(TEXT_BACK, Text_Back.getText().toString());
+            editor3.apply();
+        }
 
-        editor4.apply();
+        s = editText_Back.getText().toString();
+        if (!(s == nothing)) {
+            SharedPreferences sharedPreferences4 = getSharedPreferences(ETXT_BACK, MODE_PRIVATE);
+            SharedPreferences.Editor editor4 = sharedPreferences4.edit();
+            editor4.putString(TEXT_BACK, Text_Back.getText().toString());
 
+            editor4.apply();
+        }
         Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
     }
 
