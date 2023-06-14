@@ -6,6 +6,12 @@ import android.os.Bundle;
 
 public class Exercises extends AppCompatActivity {
 
+    /**
+     * Vytvorenie acttivity Excercise
+     *
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

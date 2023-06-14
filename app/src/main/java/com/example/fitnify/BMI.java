@@ -15,6 +15,12 @@ public class BMI extends AppCompatActivity {
     CardView cardBtn;
     TextView textView;
 
+    /**
+     * Vytvorenie acttivity a priradenie layoutov do prislušných atribútov
+     *
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +32,14 @@ public class BMI extends AppCompatActivity {
 
 
         cardBtn.setOnClickListener(new View.OnClickListener() {
+
+
+            /**
+             * Nastavenie čo sa stane po stlačeni tlačitka
+             *
+             * @param v
+             * @return
+             */
             @Override
             public void onClick(View v) {
 

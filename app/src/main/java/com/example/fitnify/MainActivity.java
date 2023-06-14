@@ -14,6 +14,13 @@ public class MainActivity extends AppCompatActivity {
     Button button_bmi;
 
     Button button_measurements;
+
+    /**
+     * Vytvorenie acttivity a priradenie layoutov do prislušných atribútov
+     *
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,14 +28,26 @@ public class MainActivity extends AppCompatActivity {
 
         button_calendar = findViewById(R.id.button5);
         button_calendar.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Nastavenie čo sa stane po stlačeni tlačitka
+             *
+             * @param v
+             * @return
+             */
             @Override
             public void onClick(View v) {
-                openCalendar();
+                openExercise();
             }
         });
 
         button_stopwatch = findViewById(R.id.button6);
         button_stopwatch.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Nastavenie čo sa stane po stlačeni tlačitka
+             *
+             * @param v
+             * @return
+             */
             @Override
             public void onClick(View v) {
                 openStopWatch();
@@ -37,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
 
         button_bmi = findViewById(R.id.button4);
         button_bmi.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Nastavenie čo sa stane po stlačeni tlačitka
+             *
+             * @param v
+             * @return
+             */
             @Override
             public void onClick(View v) {
                 openBMI();
@@ -45,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
 
         button_measurements = findViewById(R.id.button8);
         button_measurements.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Nastavenie čo sa stane po stlačeni tlačitka
+             *
+             * @param v
+             * @return
+             */
             @Override
             public void onClick(View v) {
                 openMeasurements();
@@ -52,7 +83,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void openCalendar() {
+    /**
+     * Funkcia ktorá otvorí aktivitu Exercise
+     *
+     * @return
+     */
+    public void openExercise() {
 
         Intent intent = new Intent(this, Exercises.class);
         startActivity(intent);
@@ -60,6 +96,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Funkcia ktorá otvorí aktivitu StopWatch
+     *
+     * @return
+     */
     public void openStopWatch() {
 
         Intent intent = new Intent(this, StopWatch.class);
@@ -67,6 +108,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Funkcia ktorá otvorí aktivitu BMI
+     *
+     * @return
+     */
     public void openBMI() {
 
         Intent intent = new Intent(this, BMI.class);
@@ -74,6 +120,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Funkcia ktorá otvorí aktivitu Measurements
+     *
+     * @return
+     */
     public void openMeasurements() {
 
         Intent intent = new Intent(this, Measurements.class);

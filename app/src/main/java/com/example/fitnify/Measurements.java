@@ -40,6 +40,13 @@ public class Measurements extends AppCompatActivity {
     public static final String ETXT_BACK = "ahoj";
     public static final String TEXT_BACK = "textsas";
 
+    /**
+     * Vytvorenie acttivity a priradenie layoutov do prislušných atribútov
+     *
+     * @param savedInstanceState
+     * @return
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +67,12 @@ public class Measurements extends AppCompatActivity {
 
 
         save_button.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Nastavenie čo sa stane po stlačeni tlačitka
+             *
+             * @param v
+             * @return
+             */
             @Override
             public void onClick(View v) {
                 text.setText(editText_Arm.getText().toString());
@@ -72,6 +85,11 @@ public class Measurements extends AppCompatActivity {
         loadData();
     }
 
+    /**
+     * Funkcia ktorá uloží hodnoty z editTextu do konštant
+     *
+     * @return
+     */
     public void save() {
         String s = editText_Arm.getText().toString();
         String nothing = "Klikni TU";
@@ -114,6 +132,11 @@ public class Measurements extends AppCompatActivity {
         Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Funkcia ktorá načíta data z konštant
+     *
+     * @return
+     */
     public void loadData() {
 
         SharedPreferences sharedPreferences1 = getSharedPreferences(ETXT_ARM, MODE_PRIVATE);
@@ -137,6 +160,11 @@ public class Measurements extends AppCompatActivity {
         update(slovo);
     }
 
+    /**
+     * Funkcia ktorá načíta slovo z konštanty a vypíše ho
+     *
+     * @return
+     */
     public void update(String slovo) {
 
         switch (cislo) {

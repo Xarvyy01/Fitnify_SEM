@@ -26,6 +26,12 @@ public class StopWatch extends AppCompatActivity {
     ImageButton button_stop;
     ImageButton button_reset;
 
+    /**
+     * Vytvorenie acttivity a priradenie layoutov do prislušných atribútov
+     *
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,20 +39,37 @@ public class StopWatch extends AppCompatActivity {
         button_play = findViewById(R.id.button_play);
         button_stop = findViewById(R.id.button_stop);
         button_reset = findViewById(R.id.button_reset);
+
+        /**
+         * Nastavenie čo sa stane po stlačeni tlačitka
+         *
+         * @param v
+         * @return
+         */
         button_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 start();
             }
         });
-
+        /**
+         * Nastavenie čo sa stane po stlačeni tlačitka
+         *
+         * @param v
+         * @return
+         */
         button_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 stop();
             }
         });
-
+        /**
+         * Nastavenie čo sa stane po stlačeni tlačitka
+         *
+         * @param v
+         * @return
+         */
         button_reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,13 +81,22 @@ public class StopWatch extends AppCompatActivity {
 
     }
 
+    /**
+     * Metoda časovaneho loopu
+     * @param
+     * @return
+     */
     public void casovac() {
 
         TextView text = findViewById(R.id.text);
         Handler handler = new Handler();
         handler.post(new Runnable() {
 
-
+            /**
+             * Metoda načíta hodiny, mintúty a sekundy a spusti znova cyklus kazdu jednu sekundu
+             * @param
+             * @return
+             */
             @Override
             public void run() {
 
@@ -84,18 +116,33 @@ public class StopWatch extends AppCompatActivity {
         });
     }
 
+    /**
+     * metoda ktora zapne stopky
+     * @param
+     * @return
+     */
     public void start() {
 
         zapinac = true;
 
     }
 
+    /**
+     * metoda ktora zastavi stopky
+     * @param
+     * @return
+     */
     public void stop() {
 
         zapinac = false;
 
     }
 
+    /**
+     * metoda ktora resetne stopky
+     * @param
+     * @return
+     */
     public void reset() {
 
         hodiny = 0;

@@ -16,6 +16,13 @@ public class Screen_Intro extends AppCompatActivity {
     TextView textView;
     Animation up,down;
 
+    /**
+     * Vytvorenie acttivity a priradenie layoutov do prislušných atribútov
+     *
+     * @param savedInstanceState
+     * @return
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +34,13 @@ public class Screen_Intro extends AppCompatActivity {
         textView.setAnimation(up);
         down = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.down);
         imageView.setAnimation(down);
+
         new Handler().postDelayed(new Runnable() {
+            /**
+             * metoda spusti animáciu
+             * @param
+             * @return
+             */
             @Override
             public void run() {
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
